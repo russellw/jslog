@@ -1,0 +1,2 @@
+# jslog
+JavaScript logging hack
