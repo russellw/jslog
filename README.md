@@ -1,4 +1,4 @@
-Low-tech JavaScript debugging can use `console.log`. However, we really want source file and line number printed alongside debug output. Furthermore, debugging is one time it's important to minimize typing. The solution is a hack using the C preprocessor.
+Low-tech JavaScript debugging can use `console.log`. However, we really want source file and line number printed alongside debug output,  and preferably the text of the expression being printed. (The former can be done by generating an exception and parsing its stack trace instead of throwing it, but the latter cannot.) Furthermore, debugging is one time it's important to minimize typing. The solution is a hack using the C preprocessor.
 
 Debug statements in your JavaScript code use the `zz` macro (chosen to be distinctive and easy to type, while unlikely to be used as an identifier; if you need to use `zz` as an identifier, change the name of the macro in `zz.h` to something else):
 
