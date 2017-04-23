@@ -6,7 +6,7 @@ Debug statements in your JavaScript code use the `zz` macro (chosen to be distin
 zz(some.JavaScript.expression)
 ```
 
-Run `zz.bat` and all occurrences of the macro will be turned into `console.log` statements that incorporate source file and line number. This is done by using the preprocessor of Microsoft C++, which must therefore be installed. (I will be happy to accept pull requests with Unix scripts using Clang or GCC.) `zz.bat` copies all JavaScript source files in the current directory to %TEMP% before doing anything else, though personally I find `git checkout .` is the easiest way to put things back the way they were and get rid of all the debug output. You do need to put the files back the way they were, because the C preprocessor scrubs comments.
+Run `zz.bat` and all occurrences of the macro will be turned into `console.log` statements that incorporate source file and line number. This is done by using the preprocessor of Microsoft C++, which must therefore be installed. (I will be happy to accept pull requests with Unix scripts using Clang or GCC.) `zz.bat` copies all JavaScript source files in the current directory to `%TEMP%` before doing anything else, though personally I find `git checkout .` is the easiest way to put things back the way they were and get rid of all the debug output. You do need to put the files back the way they were, because the C preprocessor scrubs comments.
 
 If you don't want `zz.bat` and `zz.h` cluttering up your source folder, run `install.bat` to copy them somewhere in your PATH.
 
